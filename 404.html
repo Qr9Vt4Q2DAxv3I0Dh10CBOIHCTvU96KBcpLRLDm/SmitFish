@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You Shouldn't Be Here</title>
+<script>
+  // Function to get the URL path without the domain
+  function getUrlSlug() {
+    return window.location.pathname.substring(1);
+  }
+  function redirectWithSlug() {
+    const baseUrl = "https://store.pokemongolive.com/offer-redemption?passcode=";
+    const urlSlug = getUrlSlug();
+    window.location.href = baseUrl + urlSlug;
+  }
+
+  window.onload = redirectWithSlug;
+</script>
+</head>
+<body>
+<h1>You shouldn't be here</h1>
+<img src="https://cdn.discordapp.com/icons/202897913016352778/a_30d228c6acf748708e8610200b6612bb.webp?size=160" alt="Not a pikachu.">
+</body>
+</html>
